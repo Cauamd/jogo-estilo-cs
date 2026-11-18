@@ -1,0 +1,67 @@
+.scope-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 4;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+.scope-aperture {
+  position: relative;
+  width: 82vmin;
+  height: 82vmin;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 150vmax rgba(4, 10, 13, 0.93),
+    inset 0 0 0 3px #08161d,
+    inset 0 0 0 6px #576c6c80,
+    inset 0 0 24px 12px #0a202b33;
+  flex-shrink: 0;
+}
+.scope-reticle {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: drop-shadow(0 0 1px #d7f1e477);
+}
+.scope-caption {
+  position: absolute;
+  bottom: 3vh;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #b9d9c7;
+  white-space: nowrap;
+}
+.scope-caption span {
+  margin-left: 30px;
+  color: #9fafa5;
+  font-size: 8px;
+}
+.is-scoped .crosshair,
+.is-scoped .objective-hint,
+.is-scoped .weapon-hud {
+  visibility: hidden;
+}
+.hud-top,
+.hud-bottom,
+.killfeed {
+  z-index: 5;
+}
+.hitmarker {
+  z-index: 6;
+}
+.damage {
+  z-index: 7;
+}
+@media (max-aspect-ratio: 1/1) {
+  .scope-aperture {
+    width: 93vmin;
+    height: 93vmin;
+  }
+}

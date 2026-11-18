@@ -1,0 +1,42 @@
+.viewmodel-qa {
+  position: fixed;
+  left: 16px;
+  top: 148px;
+  z-index: 60;
+  max-width: 310px;
+  padding: 12px;
+  background: #102527ed;
+  border: 1px solid #648582;
+  color: #d8e5e1;
+  font: 12px monospace;
+  box-shadow: 0 8px 24px #0004;
+}
+.viewmodel-qa b {
+  display: block;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  color: #b9f1cc;
+}
+.viewmodel-qa div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 6px;
+}
+.viewmodel-qa button,
+.viewmodel-qa select {
+  font: 11px monospace;
+  color: inherit;
+  background: #294043;
+  border: 1px solid #54706b;
+  padding: 6px;
+  cursor: pointer;
+}
+.viewmodel-qa button[aria-pressed="true"] {
+  background: #48715a;
+}
+.viewmodel-qa output {
+  display: block;
+  margin-top: 9px;
+  line-height: 1.7;
+}
